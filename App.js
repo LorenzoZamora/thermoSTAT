@@ -12,9 +12,6 @@ const navigator = createStackNavigator({
   PassFail: PassFailScreen
 }, {
   initialRouteName: 'Home',
-  defaultNavigationOptions: {
-    // title: 'ThermoSTAT'
-  },
   headerMode: 'none',
   options: {
     headerShown: false
