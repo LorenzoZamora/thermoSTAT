@@ -41,7 +41,7 @@ const MainHeader = ({ navigation, headerTitle }) => {
                     <Card.Title style={{ fontWeight: 'bold'}}>Reminder</Card.Title>
                     <Card.Divider/>
                     <Card.Image
-                        source={require('../../assets/hoveringBluetooth.gif')}
+                        source={require('../../assets/floatingBluetooth.webp')}
                         justifyItems='center'
                         style={{ width: 200, height: 200 }}
                         PlaceholderContent={<ActivityIndicator />}>
