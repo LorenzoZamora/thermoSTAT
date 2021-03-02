@@ -12,7 +12,10 @@ const Question = ({ question }) => {
 const styles = StyleSheet.create({
     questionStyle: {
         fontSize: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontStyle: 'italic',
+        paddingBottom: 35,
+        width: 200
     },
 });
 

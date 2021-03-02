@@ -20,7 +20,6 @@ const MainHeader = ({ navigation, headerTitle }) => {
                         name="home-circle"
                         color="#e8e7ef"
                         onPress={() => navigation.navigate('Home')}
-                        underlayColor={'#e8e7ef'}
                         size={30}
                     />
                 }
@@ -31,7 +30,6 @@ const MainHeader = ({ navigation, headerTitle }) => {
                         name="bluetooth"
                         color="#e8e7ef"
                         onPress={toggleOverlay}
-                        underlayColor={'#e8e7ef'}
                         size={30}
                     />
                 }
@@ -41,7 +39,7 @@ const MainHeader = ({ navigation, headerTitle }) => {
                     <Card.Title style={{ fontWeight: 'bold'}}>Reminder</Card.Title>
                     <Card.Divider/>
                     <Card.Image
-                        source={require('../../assets/floatingBluetooth.webp')}
+                        source={require('../../assets/hoveringBluetooth.gif')}
                         justifyItems='center'
                         style={{ width: 200, height: 200 }}
                         PlaceholderContent={<ActivityIndicator />}>
