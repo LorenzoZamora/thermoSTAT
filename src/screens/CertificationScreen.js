@@ -11,12 +11,13 @@ const CertificationScreen = ({ navigation }) => {
             <View style={styles.backgroundViewStyle}>
                 <View style={styles.descViewStyle}>
                     <Text style={styles.descTextStyle}>
-                        There will be a series of 13 questions, and a temperature check
-                        using the ThermoSTAT Thermometer. After your responses, you'll either
-                        be good to go, or given more info on possible steps to take.
+                        {`There will be:
+                        \n• a series of 13 questions
+                        \n• a temperature check with the ThermoSTAT Thermometer
+                        \nAfter your responses, you'll either be cleared, or given more info on next steps.`}
                     </Text>
                 </View>
-                <View style={{paddingBottom: 135}}/>
+                <View style={{paddingBottom: 48}}/>
                 <Button
                     type="outline"
                     raised={true}
@@ -58,8 +59,8 @@ const styles = StyleSheet.create({
     },
     descTextStyle: {
         fontSize: 25,
-        textAlign: 'center',
-        width: 325
+        textAlign: 'left',
+        width: 330
     },
     certifiedButtonStyle: {
         color: '#0d1347',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Icon} from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import MainHeader from "../components/MainHeader";
@@ -25,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
                     type="outline"
                     raised={true}
                     onPress={() => navigation.navigate('Certify')}
-                    title="Let's get Started!  "
+                    title="Let's Get Started!  "
                     icon={
                         <Icon
                             type="material-community"

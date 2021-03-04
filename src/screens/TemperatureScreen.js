@@ -1,28 +1,35 @@
 import React, { useState } from 'react';
-import {View, Button, StyleSheet, Text, Linking} from 'react-native';
+import { View, Button, StyleSheet, Text } from 'react-native';
 import MainHeader from "../components/MainHeader";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import TempInput from "../components/TempInput";
 
 const TemperatureScreen = ({ navigation }) => {
-    const [term, setTerm] = useState('');
+    const { questionResult } = navigation.getParam('status')
+    const { userTemp, setUserTemp } = useState('0.0');
+
+    const checkTemp = (questionResult) => {
+        console.log("Checking Temperature");
+        console.log({userTemp});
+        console.log({questionResult});
+        if (({questionResult} === 0) || (parseFloat(userTemp) >= 100.4)) {
+            navigation.navigate('PassFail', {status: questionResult})
+        } else if (({questionResult} === 1) && (parseFloat(userTemp) <= 100.4)) {
+            navigation.navigate('PassFail', {status: questionResult})
+        }
+    }
 
     return (
         <SafeAreaProvider>
             <MainHeader navigation={navigation} headerTitle={'Temperature'}/>
             <View style={styles.backgroundViewStyle}>
-                { navigation.getParam('status') === 0 ?
-                    <Text>
-                        <Text>You have COVID-19 symptoms</Text>
-                        <Text>Click the link below to see testing sites</Text>
-                        <Button
-                            title="See local COVID-19 testing sites"
-                            onPress={() => { Linking.openURL('https://www.naccho.org/membership/lhd-directory') }}
-                        />
-                    </Text>
-                    :
-                    <Text> YOU ARE WELL!</Text>
-                }
-                <Button title="Take Temp" onPress={navigation.navigate('PassFail')} />
+                <TempInput
+                    term={userTemp}
+                    onTermChange={setUserTemp}
+                />
+                <Button
+                    title="Take Your Temperature"
+                    onPress={checkTemp(questionResult)} />
             </View>
         </SafeAreaProvider>
     );
