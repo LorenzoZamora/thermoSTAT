@@ -16,14 +16,14 @@ const PassFailScreen = ({ navigation }) => {
     const [currentDate, setCurrentDate] = useState('');
 
     useEffect(() => {
-        let date = new Date().getDate();
         let month = new Date().getMonth() + 1;
+        let date = new Date().getDate();
         let year = new Date().getFullYear();
         let hours = new Date().getHours();
         let min = new Date().getMinutes();
         let sec = new Date().getSeconds();
         setCurrentDate(
-            date + '/' + month + '/' + year
+            month + '/' + date + '/' + year
             + '\n' + hours + ':' + min + ':' + sec
         );
     }, []);
@@ -153,20 +153,10 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 47,
         paddingVertical: '25%'
     },
-    healthyMessage: {
-        width: 100
-    },
     descViewStyle: {
         backgroundColor: '#eeb9ba',
         borderRadius: 10,
         borderColor: '#c54145',
-        padding: 10
-    },
-    descClearedStyle: {
-        backgroundColor: '#bbe3a7',
-        borderRadius: 10,
-        borderColor: '#61ae35',
-        borderWidth: 3,
         padding: 10
     },
     descTextStyle: {
@@ -174,6 +164,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         width: 330,
         padding: 3
+    },
+    descClearedStyle: {
+        backgroundColor: '#bbe3a7',
+        borderRadius: 10,
+        borderColor: '#61ae35',
+        borderWidth: 3,
+        padding: 10
     },
     seeTestingButtonStyle: {
         color: '#0d1347',

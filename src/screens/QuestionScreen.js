@@ -34,9 +34,9 @@ const QuestionScreen = ({ navigation }) => {
 
     useEffect(() => {
         if ((yes > 0) && (question === 12)) {
-            navigation.navigate('PassFail', {status: 0, temperature: 100.5});
+            navigation.navigate('Temperature', {status: 0, temperature: 100.5});
         } else if (question === 12) {
-            navigation.navigate('PassFail', {status: 1, temperature: 100.5});
+            navigation.navigate('Temperature', {status: 1, temperature: 100.5});
         }
     });
 
