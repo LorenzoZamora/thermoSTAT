@@ -9,8 +9,11 @@ const theme = {
     Button: {
         raised: true,
         type: "outline",
-        color: "#c54145",
-        width: 100
+        buttonStyle: {
+            color: "white",
+            width: 75,
+            height: 65
+        }
     }
 };
 
@@ -18,9 +21,6 @@ const QuestionScreen = ({ navigation }) => {
     const [question, setQuestion] = useState(0);
     const [yes, setYes] = useState(0);
     const [no, setNo] = useState(0);
-
-    const questions = ["A cough?", "Shortness of breath?", "Loss of taste or smell?"];
-    const images = ["head-side-cough", "lungs", "food-off"];
 
     const setYesQuestions = () => {
         setQuestion(question+1);
@@ -34,9 +34,9 @@ const QuestionScreen = ({ navigation }) => {
 
     useEffect(() => {
         if ((yes > 0) && (question === 12)) {
-            navigation.navigate('Temperature', {status: 0});
+            navigation.navigate('PassFail', {status: 0, temperature: 100.5});
         } else if (question === 12) {
-            navigation.navigate('Temperature', {status: 1});
+            navigation.navigate('PassFail', {status: 1, temperature: 100.5});
         }
     });
 
@@ -504,7 +504,7 @@ const styles = StyleSheet.create({
     },
     questionViewStyle: {
         padding: 20,
-        paddingTop: 20
+        paddingTop: 20,
     },
     mainQuestionStyle: {
         fontSize: 30,
@@ -514,7 +514,7 @@ const styles = StyleSheet.create({
     },
     viewButtonStyle: {
         justifyContent: 'space-around',
-        backgroundColor: '#d08078',
+        backgroundColor: '#c54145',
         borderRadius: 20,
         padding: 15,
         flexDirection: 'row',
