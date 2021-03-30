@@ -41,9 +41,8 @@ const PassFailScreen = ({ navigation }) => {
                             size={30}
                         />
                         <Text style={styles.descTextStyle}>
-                            {`You have potentially been exposed to COVID-19 and infected.
-                                \nConsider quarantining for 2 weeks and getting tested.
-                                \nSee your healthcare professional for more info.`}
+                            {`Due to experiencing symptoms and/or potential exposure to COVID-19, please quarantine for 2 weeks and get tested.
+                                \nSee a healthcare professional for more information.`}
                         </Text>
                     </View>
                     <View style={{paddingBottom: 48}}/>

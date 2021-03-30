@@ -10,7 +10,7 @@ const HomeScreen = ({ navigation }) => {
             <MainHeader navigation={navigation} headerTitle={'Homepage'}/>
             <View style={styles.backgroundViewStyle}>
                 <View style={styles.titleViewStyle}>
-                    <Text style={styles.welcomeMessageStyle}>Welcome to the ThermoSTAT App</Text>
+                    <Text style={styles.welcomeMessageStyle}>Welcome to the thermoSTAT Mobile App</Text>
                 </View>
                 <View style={styles.logoViewStyling}>
                     <Image
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         paddingVertical: '25%'
     },
     welcomeMessageStyle: {
-        fontSize: 23,
+        fontSize: 18,
         textAlign: 'center',
         fontWeight: "bold",
         width: 400,

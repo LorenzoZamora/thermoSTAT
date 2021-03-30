@@ -45,7 +45,7 @@ const QuestionScreen = ({ navigation }) => {
             <MainHeader navigation={navigation} headerTitle={'Symptom Check'}/>
             <View style={styles.backgroundViewStyle}>
                 { question < 10
-                    ? <Text style={styles.mainQuestionStyle}>Have you had:</Text>
+                    ? <Text style={styles.mainQuestionStyle}>Are you experiencing:</Text>
                     : null
                 }
 
@@ -197,7 +197,7 @@ const QuestionScreen = ({ navigation }) => {
                 { question === 4
                     ? <Text>
                         <View style={styles.questionViewStyle}>
-                            <Question question="non-allergy related congesetion?"/>
+                            <Question question="non-allergy related congestion?"/>
                             <View style={{paddingBottom: 65}}/>
                             <View style={styles.viewButtonStyle}>
                                 <Button

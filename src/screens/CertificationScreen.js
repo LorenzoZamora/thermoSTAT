@@ -11,9 +11,9 @@ const CertificationScreen = ({ navigation }) => {
             <View style={styles.backgroundViewStyle}>
                 <View style={styles.descViewStyle}>
                     <Text style={styles.descTextStyle}>
-                        {`There will be:
-                        \n• a series of 13 questions
-                        \n• a temperature check with the ThermoSTAT Thermometer
+                        {`You will complete the following:
+                        \n• A 13 question symptom check
+                        \n• A temperature check with the thermoSTAT Thermometer
                         \nAfter your responses, you'll either be cleared, or given more info on next steps.`}
                     </Text>
                 </View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         padding: 10
     },
     descTextStyle: {
-        fontSize: 25,
+        fontSize: 24.25,
         textAlign: 'left',
         width: 330
     },
